@@ -1,0 +1,125 @@
+:root {
+	--primary-color: rgb(233, 233, 233);
+	--white-color: #ffffff;
+	--text-color: #111729;
+	--border-color: #4a5567;
+}
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+body {
+	font-family: "Lato", sans-serif;
+	min-height: 100vh;
+	display: grid;
+	grid: "card-container" 1fr "footer" auto/ 1fr;
+	position: relative;
+	background-color: var(--primary-color);
+	color: var(--border-color);
+}
+h1 {
+	font-size: clamp(1.5rem, 2vw, 2rem);
+	line-height: 2rem;
+	text-align: left;
+	font-family: "Poppins", sans-serif;
+	font-weight: 600;
+	color: var(--text-color);
+}
+p {
+	font-size: clamp(1rem, 2vw, 2rem);
+	line-height: 1.55rem;
+}
+span {
+	font-size: clamp(0.875rem, 2vw, 2rem);
+	line-height: 1.25rem;
+}
+.name {
+	font-weight: bold;
+	color: var(--text-color);
+}
+.card-container {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	margin: auto;
+	grid-area: card-container;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	max-width: 450px;
+	min-width: 398px;
+	border-radius: 10px;
+	box-sizing: border-box;
+	overflow: hidden;
+	background-color: var(--white-color);
+}
+.image-container {
+	position: relative;
+	box-sizing: border-box;
+	margin-bottom: 10px;
+	width: 100%;
+}
+.image-container .image-photo {
+	display: block;
+	border-radius: 15px;
+	width: 100%;
+}
+.image-container .img-white {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	height: 20%;
+	background-image: url(./resources/white-overlay.svg);
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+.card-description {
+	padding: 0 35px 15px 35px;
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	justify-content: center;
+	gap: 15px;
+}
+.card-line {
+	height: 1px;
+	width: 100%;
+	background-color: var(--primary-color);
+	margin: 10px 0;
+}
+.card-customer {
+	display: flex;
+	width: 100%;
+	padding: 25px;
+}
+.card-customer .avatar {
+	border-radius: 50%;
+	width: 40px;
+}
+.card-customer .card-cotumer__text {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	justify-content: center;
+	margin-left: 15px;
+}
+.footer {
+	grid-area: footer;
+	font-size: 14px;
+	text-align: center;
+	color: rgb(55, 65, 81);
+}
+
+.footer a {
+	color: rgb(55, 65, 81);
+	text-decoration: underline;
+}
+@media screen and (min-width: 800px) {
+	p {
+		font-size: 1.04rem;
+	}
+}
